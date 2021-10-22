@@ -1,0 +1,78 @@
+.container-three {
+    background-image: url(../../img/bg/bg-three.webp);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+        width: 90%;
+        justify-content: space-between;
+        padding-top: 4rem;
+        
+        .container-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 47.5%;
+    
+            @media screen and (max-width:540px){
+                width: 100%;
+            }
+
+            .title {
+                text-align: left;
+                line-height: 34px;
+                margin-bottom: 1.25rem;
+
+                @media screen and (max-width:540px){
+                    text-align: center;
+                }
+            }
+    
+            .points {
+                @media screen and (max-width:540px){
+                    display: grid;
+                    justify-items: center;
+                }
+    
+                img[alt="Points"] {
+                    margin-bottom: 1.75rem;
+                }
+        
+                .check {
+                    display: flex;
+                    margin-bottom: 1rem;
+        
+                    @media screen and (max-width:540px){
+                        justify-content: center;
+                    }
+        
+                    .check-icon {
+                        margin-top: -5px;
+                    }
+                }
+        
+                .title, .text {
+                    max-width: 445px;
+        
+                    @media screen and (max-width:540px){
+                        max-width: none;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .product {
+            width: 47.5%;
+
+            @media screen and (max-width:540px){
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+//COLORS START
+    $color-primary: #ffc800;
+    $color-secondary: #fff;
+    $color-terciary: #ffcc99;
+//COLORS END
+
+//ELEMENTS START
+    .container {
+        display: flex;
+        max-width: 1080px;
+        width: 95%;
+        margin: auto;
+        flex-direction: row;
+        padding: 2rem 0;
+        justify-content: center;
+
+        @media screen and (max-width:520px){
+            flex-direction: column;
+        }
+    }
+
+    .button {
+        display: block;
+        background-color: $color-primary;
+        width: fit-content;
+        margin: auto;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-family: $font-montserrat;
+        font-weight: bold;
+        color: #000;
+        border-radius: 2.5rem;
+        text-decoration: none;
+        text-align: center;
+        box-shadow: 0 1px 1px #00000090;
+
+        @media screen and (max-width:540px){
+            font-size: 0.9rem;
+        }
+    }
+
+    .title {
+        font-size: 2rem;
+        text-align: center;
+        font-family: $font-openSans;
+        font-weight: lighter;
+
+        strong {
+            font-weight: 700;
+        }
+    }
+
+    .text {
+        font-family: $font-openSans;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+//ELEMENTS END

@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    @media screen and (max-width:1080px){
+        font-size: 93.75%;
+    }
+    @media screen and (max-width:780px){
+        font-size: 87.50%;
+    }
+}
+
+@import 'font';
+@import 'variables';
+
+[data-anime] {
+    opacity: 0;
+    transition: 1s;
+}
+
+[data-anime = "top"] {
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anime = "left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime = "rigth"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}

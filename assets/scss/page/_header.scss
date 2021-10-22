@@ -1,0 +1,234 @@
+header {
+    background-image: url(../../img/bg/bg-one.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    .container {
+        flex-direction: column;
+
+        .menu {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+    
+    
+            .logo {
+                width: 11rem;
+                margin-left: 15px;
+                margin-top: 3px;
+    
+                img {
+                    width: 100%;
+                }
+            }
+    
+            .menu-section {
+                .menu-togle {
+                    display: none;
+                }
+    
+                nav {
+                    ul {
+                        display: flex;
+    
+                        li {
+                            list-style: none;
+                            padding: 1rem;
+                            transition: all 0.25s linear 0s;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+    
+                            &:hover {
+                                background: #ffffff25;
+
+                                &:nth-child(5) {
+                                    background: rgba(255, 228, 196, 0);
+                                }
+                            }
+    
+                            a {
+                                text-decoration: none;
+                                color: #fff;
+                                font-family: $font-montserrat;
+                                font-weight: 500;
+                                font-size: 0.85rem;
+                            }
+    
+                            .button {
+                                font-weight: bold;
+                                color: #000;
+                                padding: 0.5rem 1rem;
+                                transition: all 0.25s;
+
+                                &:hover {
+                                    transform: matrix(1.08,0,0,1.08,0,0);
+                                }
+
+                                @media screen and (max-width:540px){
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            @media (max-width: 540px) {
+                .logo {
+                    margin-top: 15px;
+                }
+    
+                nav {
+                    display: none;
+                }
+                
+                .one,
+                .two,
+                .three {
+                    background-color: #fff;
+                    height: 5px;
+                    width: 100%;
+                    margin: 6px auto;
+                    
+                    transition-duration: 0.3s;
+                }
+                
+                .menu-toggle {
+                    width: 40px;
+                    height: 30px;
+                    margin-right: 20px;
+                }
+            
+                .menu-section.on {
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    
+                    width: 100vw;
+                    height: 100vh;
+            
+                    background-color: $color-terciary;
+                    
+                    z-index: 10;
+            
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            
+                .menu-section.on nav {
+                    display: block;
+                }
+            
+                .menu-section.on .menu-toggle {
+                    position: absolute;
+                    right: 25px;
+                    top: 15px;
+                }
+            
+                .menu-section.on .menu-toggle .one {
+                    transform: rotate(45deg) translate(7px, 7px);
+                    background-color: #000;
+                }
+            
+                .menu-section.on .menu-toggle .two {
+                    opacity: 0;
+                }
+            
+                .menu-section.on .menu-toggle .three {
+                    transform: rotate(-45deg) translate(8px, -9px);
+                    background-color: #000;
+                }
+            
+                .menu-section.on nav ul {
+                    text-align: center;
+                    display: block;
+                }
+            
+                .menu-section.on nav ul a{
+                    transition-duration: 0.5s;
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    display: block;
+                    color: #000;
+
+                    &.button {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .container__video {
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            margin-top: 4rem;
+
+            @media screen and (max-width:540px){
+                flex-direction: column;
+            }
+
+            aside.container__video-text {
+                width: 40%;
+                max-width: 400px;
+
+                @media screen and (max-width:540px){
+                    width: 100%;
+                }
+                h1.title {
+                    color: #fff;
+                    font-family: $font-montserrat;
+                    font-weight: bold;
+                    text-align: left;
+                    margin-bottom: 1rem;
+                    @media screen and (max-width:540px){
+                        text-align: center;
+                    }
+                }
+
+                p.text {
+                    color: $color-primary;
+                    font-family: $font-openSans;
+                    margin-bottom: 1rem;
+                    @media screen and (max-width:540px){
+                        text-align: center;
+                        margin-bottom: 1.75rem;
+                    }
+                }
+
+                .button {
+                    margin-bottom: 1rem;
+
+                    @media screen and (max-width:540px){
+                        display: none;
+                    }
+                }
+            }
+
+            aside.container__video-video {
+                margin-left: 1rem;
+                width: 60%;
+
+                @media screen and (max-width:540px){
+                    width: 100%;
+                    margin-left: 0;
+                }
+                @import 'video';
+
+                .button {
+                    display: none;
+                    margin-top: 1.75rem;
+
+                    @media screen and (max-width:540px){
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

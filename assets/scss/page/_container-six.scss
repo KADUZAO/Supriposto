@@ -1,0 +1,120 @@
+.container-six {
+    background-image: url(../../img/bg/bg-two.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media screen and (max-width: 480px){
+        & {
+            background-position: left;
+        }
+    }
+
+    .container {
+        flex-direction: column;
+        .title {
+            color: #fff;
+        }
+
+        .threepoints {
+            width: fit-content;
+            margin: 1rem auto 2.5rem auto;
+
+            @media screen and (max-width: 480px){
+                & {
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+        .container__video {
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            margin-top: 4rem;
+            width: 100%;
+            justify-content: space-between;
+
+            @media screen and (max-width:540px){
+                flex-direction: column;
+                margin-top: 0;
+            }
+
+            aside.container__video-text {
+                width: 40%;
+                max-width: 400px;
+
+                @media screen and (max-width:540px){
+                    width: 100%;
+                }
+
+                p.text {
+                    color: #fff;
+                    font-family: $font-openSans;
+                    margin-bottom: 1rem;
+                    font-size: 1.6rem;
+
+                    strong {
+                        color: $color-primary;
+                    }
+                    @media screen and (max-width:540px){
+                        text-align: center;
+                        margin-bottom: 1.75rem;
+                    }
+                }
+
+                .button {
+                    margin-bottom: 1rem;
+
+                    @media screen and (max-width:540px){
+                        display: none;
+                    }
+                }
+            }
+
+            aside.container__video-video {
+                margin-left: 1rem;
+                width: 50%;
+
+                @media screen and (max-width:540px){
+                    width: 100%;
+                    margin-left: 0;
+                }
+                @import 'video';
+                #video {
+                    .video {
+                        height: 18.5rem;
+
+                        @media screen and (max-width: 720px){
+                            & {
+                                height: 19rem;
+                            }
+                        }
+                        @media screen and (max-width: 480px){
+                            & {
+                                height: 14.6rem;
+                            }
+                        }
+                        @media screen and (max-width: 400px){
+                            & {
+                                height: 13rem;
+                            }
+                        }
+                        @media screen and (max-width: 300px){
+                            & {
+                                height: 9.5rem;
+                            }
+                        }
+                    }
+                }
+
+                .button {
+                    display: none;
+                    margin-top: 1.75rem;
+
+                    @media screen and (max-width:540px){
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
